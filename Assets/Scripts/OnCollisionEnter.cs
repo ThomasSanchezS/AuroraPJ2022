@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OnCollisionEnter : MonoBehaviour
 {
-    public GameManager gameManager;
+    public GameManager01 gameManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +19,7 @@ public class OnCollisionEnter : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
 	{
+        Debug.Log("Me esta tocando!!");
 		if (other.tag == "Player") {
 			gameManager.GameOver();
 		}
