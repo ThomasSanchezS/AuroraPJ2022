@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void GameOver(){
-        SceneManager.LoadScene("Nivel2");
+        SceneManager.LoadScene("Nivel2.1.1");
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnCollisionEnter : MonoBehaviour
+public class OnCollisionEnter1 : MonoBehaviour
 {
-    public GameManager gameManager;
+    public GameManager01 gameManager;
     // Start is called before the first frame update
     void Start()
     {
