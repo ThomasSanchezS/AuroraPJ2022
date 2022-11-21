@@ -5,14 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class GameManager01 : MonoBehaviour
 {
-
+    public static GameManager01 instance;
     public float restartDelay=1f;
     public GameObject[] playerCharacters;
-    void restart(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    public float waitAfterDying = 2f;
+
+    private void Awake(){
+        instance = this;
     }
+    
     private void Start(){
          playerCharacters = GameObject.FindGameObjectsWithTag("Player");
+         Cursor.lockState = CursorLockMode.Locked;
     }
     private void Update(){
          /* foreach (GameObject jugadorpj in playerCharacters){
@@ -31,6 +35,14 @@ public class GameManager01 : MonoBehaviour
 
     public void PlayerDied(){
 
+        StartCoroutine(PlayerDiedCo());
+        
+    }
+
+    public IEnumerator PlayerDiedCo(){
+
+        yield return new WaitForSeconds(waitAfterDying);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 /*
     public void Credits(){
