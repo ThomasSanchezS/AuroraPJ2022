@@ -23,10 +23,14 @@ public class GameManager01 : MonoBehaviour
           }*/
     }
 
-    public void GameOver(){
+    public void Nivel3(){
         SceneManager.LoadScene("Nivel3");
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void PlayerDied(){
+
     }
 /*
     public void Credits(){

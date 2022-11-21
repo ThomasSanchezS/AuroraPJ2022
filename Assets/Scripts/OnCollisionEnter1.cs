@@ -21,7 +21,7 @@ public class OnCollisionEnter1 : MonoBehaviour
 	{
         Debug.Log("Me esta tocando!!");
 		if (other.tag == "Player") {
-			gameManager.GameOver();
+			gameManager.Nivel3();
 		}
 	}
 }

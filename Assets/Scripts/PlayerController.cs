@@ -121,4 +121,11 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    void OnCollisionEnter(Collision other){
+        Debug.Log("Me esta tocando!!");
+        if(other.gameObject.tag == "Enemy"){
+            
+        }
+    }
 }

@@ -29,6 +29,10 @@ public class BulletController : MonoBehaviour
         if(other.gameObject.tag == "Enemy"){
             other.gameObject.GetComponent<EnemyHealthController>().DamageEnemy();
         }
+
+        if(other.gameObject.tag == "Player"){
+            PlayerHealthController.instance.DamagePlayer(5);
+        }
         Destroy(gameObject);
         Instantiate(impactEffect, transform.position, transform.rotation);
     }
