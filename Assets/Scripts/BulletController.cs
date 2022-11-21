@@ -26,6 +26,9 @@ public class BulletController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other){
+        if(other.gameObject.tag == "Enemy"){
+            other.gameObject.GetComponent<EnemyHealthController>().DamageEnemy();
+        }
         Destroy(gameObject);
         Instantiate(impactEffect, transform.position, transform.rotation);
     }
