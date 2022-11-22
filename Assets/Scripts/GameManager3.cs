@@ -9,17 +9,17 @@ public class GameManager3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
         foreach (GameObject jefe in jefeChar){
-             float jefeHealth = jefe.GetComponent<EnemyHealthController>().currentHealth;
-              if(jefeHealth<=0){
-                Debug.Log("holi");
-          }
+            if(jefe == null){
+                SceneManager.LoadScene("CinematicaN3");
+              }
+              }
           }
     }
-}
+

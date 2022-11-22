@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start(){
          playerCharacters = GameObject.FindGameObjectsWithTag("Player");
+         Cursor.lockState = CursorLockMode.Locked;
 
     }
     private void Update(){

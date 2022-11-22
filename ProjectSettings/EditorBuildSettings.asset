@@ -17,9 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel3.unity
     guid: 4d2076e31dfaac446b1e21aee2308a1c
-  - enabled: 0
-    path: Assets/Scenes/NivelFinal.unity
-    guid: dbf567e80508ba84bbb5a1042e6f9c4c
+  - enabled: 1
+    path: Assets/Scenes/CinematicaN3.unity
+    guid: 28f4508d655031b4cb20a9e92d53bf51
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 4e88f989fb036c74bb4461f134719106
