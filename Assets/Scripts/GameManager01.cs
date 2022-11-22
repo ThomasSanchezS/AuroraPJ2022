@@ -9,6 +9,7 @@ public class GameManager01 : MonoBehaviour
     public float restartDelay=1f;
     public GameObject[] playerCharacters;
     public float waitAfterDying = 2f;
+    
 
     private void Awake(){
         instance = this;
