@@ -45,8 +45,7 @@ public class PlayerHealthController : MonoBehaviour
 
             invincCounter = invincibleLenght;
 
-            UiController.instance.healthSlider.maxValue = maxHealth;
-            UiController.instance.healthSlider.maxValue = currentHealth;
+            UiController.instance.setHealth(currentHealth);
         }
     }
 }

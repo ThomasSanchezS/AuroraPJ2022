@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     public bool InvertX;
     public bool InvertY;
 
+    public GameObject muzzleFlash;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -99,6 +101,7 @@ public class PlayerController : MonoBehaviour
         camTransform.rotation = Quaternion.Euler(camTransform.rotation.eulerAngles + new Vector3(-mouseInput.y,0f, 0f));
 
         //DISPARAR
+        muzzleFlash.SetActive(false);
         layer = 1<<layer;
         layer = ~layer;
 
@@ -110,6 +113,7 @@ public class PlayerController : MonoBehaviour
             GameObject bala = Instantiate(bullet, firePoint.position, firePoint.rotation);
             Rigidbody balarb = bala.GetComponent<Rigidbody>();
             balarb.AddForce(firePoint.forward * 10f, ForceMode.VelocityChange);
+            muzzleFlash.SetActive(true);
 
             //Instantiate(bullet, firePoint.position, (camTransform.rotation * Quaternion.AngleAxis(88f, Vector3.right)) * Quaternion.AngleAxis(0f, Vector3.left));
         }

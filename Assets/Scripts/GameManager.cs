@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start(){
          playerCharacters = GameObject.FindGameObjectsWithTag("Player");
+
     }
     private void Update(){
          /* foreach (GameObject jugadorpj in playerCharacters){
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
     public void GameOver(){
         SceneManager.LoadScene("Nivel2.1.1");
         Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 /*
     public void Credits(){

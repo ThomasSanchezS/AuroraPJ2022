@@ -58,9 +58,10 @@ public class EnemyController : MonoBehaviour
 
      void OnCollisionEnter(Collision other)
 	{
-       Debug.Log("Me esta tocando!!");
 		if (other.gameObject.tag == "Player") {
-			 
+            Debug.Log("*Lo manosea");
+			PlayerHealthController health = other.gameObject.GetComponent<PlayerHealthController>();
+            health.DamagePlayer(5);
 		}
     }
 }
